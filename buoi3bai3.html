@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Trang Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .box, .responsive-box {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .responsive-box {
+            width: 60%;
+            border: 2px solid gray;
+            margin: 0 auto;
+        }
+        .color-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .color-box {
+            padding: 10px;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+        .green { background-color: green; }
+        .table-container {
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: green;
+            color: white;
+        }
+        tr:hover {
+            background-color: lightgray;
+        }
+        ul {
+            color: blue;
+        }
+        h3 {
+            border-bottom: 2px solid gray;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>3.1 - Tin Tức</h3>
+    <div class="box">Dàn khí tài hiện đại của Công an trưng bày quanh hồ Gươm</div>
+    <div class="responsive-box">Hà Nội - Ngày 8/3, tại hồ Hoàn Kiếm, Bộ Công an tổ chức trưng bày khí tài hiện đại nhân kỷ niệm các ngày lễ lớn, thu hút sự quan tâm của đông đảo người dân.</div>
+    
+    <h3>3.2 - Danh Mục Xe và Thiết Bị</h3>
+    <div class="color-boxes">
+        <div class="color-box red">Trong khuôn khổ các hoạt động kỷ niệm 80 năm Ngày Truyền thống Công an Nhân dân, Bộ Công an tổ chức trưng bày khí tài hiện đại.</div>
+        <div class="color-box blue">Ba chiếc xe bọc thép S5 được trưng bày tại ngã tư Tràng Tiền - Đinh Tiên Hoàng, phục vụ truy đuổi tội phạm nguy hiểm.</div>
+        <div class="color-box green">Xe IAG chống đạn được bố trí tại nhiều tuyến phố trung tâm để giới thiệu đến công chúng.</div>
+    </div>
+    
+    <ul>
+        <li>Xe thông tin chỉ huy của Bộ Tư lệnh Cảnh sát Cơ động</li>
+        <li>Xe phóng thang</li>
+        <li>Xe chỉ huy Hummer H2 bọc thép chống đạn</li>
+        <li>Xe bọc thép Ram 2000</li>
+        <li>Xe phun nước chống bạo loạn</li>
+    </ul>
+    
+    <h3>3.3 - Hoạt Động Kỷ Niệm</h3>
+    <p>Danh sách các hoạt động kỷ niệm 80 năm Ngày Truyền thống Công an Nhân dân và 20 năm Ngày hội Toàn dân bảo vệ an ninh Tổ quốc.</p>
+    
+    <h4>Danh sách hoạt động:</h4>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Tên Hoạt Động</th>
+                <th>Nội Dung</th>
+                <th>Địa Điểm</th>
+            </tr>
+            <tr>
+                <td>Biểu diễn trống hội & võ thuật</td>
+                <td>Trình diễn võ thuật và đánh trống</td>
+                <td>Quảng trường Lý Thái Tổ</td>
+            </tr>
+            <tr>
+                <td>Triển lãm công nghệ số</td>
+                <td>Ứng dụng mô hình Immersive Museum</td>
+                <td>Khu vực Hồ Hoàn Kiếm</td>
+            </tr>
+            <tr>
+                <td>Trưng bày thiết bị, khí tài</td>
+                <td>Trưng bày xe bọc thép, robot, xe chữa cháy…</td>
+                <td>Dọc đường Hàng Khay, Tràng Tiền</td>
+            </tr>
+            <tr>
+                <td>Trải nghiệm cảnh sát</td>
+                <td>Hướng dẫn an toàn, phòng chống tội phạm</td>
+                <td>Hồ Hoàn Kiếm</td>
+            </tr>
+            <tr>
+                <td>Biểu diễn mô tô, võ thuật</td>
+                <td>Trình diễn kỹ năng chuyên nghiệp</td>
+                <td>Các tuyến phố quanh Hồ Gươm</td>
+            </tr>
+            <tr>
+                <td>Huấn luyện cảnh khuyển</td>
+                <td>Trình diễn khả năng đặc biệt của cảnh khuyển</td>
+                <td>Khu vực Hồ Hoàn Kiếm</td>
+            </tr>
+            <tr>
+                <td>Áo dài duyên dáng</td>
+                <td>Quảng bá hình ảnh phụ nữ Công an</td>
+                <td>Đường Đinh Tiên Hoàng</td>
+            </tr>
+            <tr>
+                <td>Gala âm nhạc</td>
+                <td>Biểu diễn của nghệ sĩ nổi tiếng</td>
+                <td>Quảng trường Đông Kinh Nghĩa Thục</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
