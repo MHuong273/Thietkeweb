@@ -1,40 +1,186 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Bài tập thiết kế web buổi 1</title>
-        <style>
-            b{
-                font-size: 24px;
-            }
-        </style>
-    </heal>
-    <body>
-        <b><a href="file:///C:/Users/admin/Downloads/buoi4bai4.html#trangchu">Trang chủ</a></b>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #A7C7E7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+        .menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            margin: 0 15px;
+        }
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu li a:hover {
+            color: #f4a261;
+        }
+        #search {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        body {
+            padding-top: 50px;
+        }
+        .exercise-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 10px 0;
+        }
+        .exercise-list li {
+            list-style: none;
+            background: #A7C7E7;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .exercise-list li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .exercise-list li a:hover {
+            color: #f4a261;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="color: white; font-weight: bold;">Mai Hương</div>
+            <ul class="menu">
+                <li><a href="#trangchu">TRANG CHỦ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#info">Thông tin cá nhân</a></li>
+                <li><a href="#skills">Sở thích & Kỹ năng</a></li>
+                <li><a href="#dinhhuong">Định hướng</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#baitap">Bài tập</a></li>
+            </ul>
+            <input type="text" id="search" placeholder="Tìm kiếm...">
+        </nav>
+    </header>
+    <section id="trangchu" class="fade-in">
+        <div class="container">
+            <b><a href="file:///C:/Users/admin/Downloads/buoi4bai4.html#trangchu">Trang chủ</a></b>
+        </div>
+    </section>
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>Giới thiệu bản thân</h2>
+            <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/481114634_1026445569317489_5756482359229092189_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGdBnsJjgrHdhK-yjfvSnOfBS0ABZnlozoFLQAFmeWjOpP2aHMIh8wQeR-tbU9Ld8iucW9cJ8DmQlhjDJIp1NKG&_nc_ohc=Z8lAAER7xDMQ7kNvgE4qtN6&_nc_oc=AdjvEMWkzY-4fVAZa2ExQWtcAz9LbJuvgor3B7oPO_5XplvvsrNFCTHL16-Z0iqGqhdd_why219mJAagvvKd19K7&_nc_zt=23&_nc_ht=scontent.fhan2-3.fna&_nc_gid=AUazFDOPbGQc5qXxPyxwSzy&oh=00_AYG-g_0r4NsdZZLyQvprv0auBJ1DQmK5TGRlMAh6vY1gOg&oe=67D230A4" alt="Ảnh đại diện">
+            <p>Xin chào! 👋<br>Mình là Đặng Mai Hương, sinh viên năm nhất ngành Công nghệ Thông tin tại Trường Đại học Thủ đô Hà Nội. Mình là một người năng động, sáng tạo, vui vẻ và hòa đồng.</p>
+        </div>
+    </section>
+    
+    <section id="info" class="fade-in">
+        <div class="container">
+            <h2>Thông Tin Cá Nhân</h2>
+            <ul>
+                <li><strong>Email:</strong> hmt6.mh273@gmail.com</li>
+                <li><strong>Số điện thoại:</strong> 0336236215</li>
+                <li><strong>Địa chỉ:</strong> TT Chúc Sơn, huyện Chương Mỹ, TP Hà Nội</li>
+            </ul>
+        </div>
+    </section> 
+    <section id="skills" class="fade-in">
+        <div class="container">
+            <h2>Sở thích & Kỹ năng</h2>
+            <ul>
+                <li>✅ Đam mê thiết kế đồ họa.</li>
+                <li>✅ Kỹ năng mềm: Làm việc nhóm, tư duy logic, giải quyết vấn đề.</li>
+                <li>✅ Sở thích cá nhân: Chụp ảnh, nghe nhạc, du lịch, nấu ăn và chơi game.</li>
+            </ul>
+        </div>
+    </section>
 
-
-        <h2> Bài tập</h1>
-        <br><a href="Bài 1.html">Bài tập 1</a>
-        <br><a href="Bài 2.html">Bài tập 2.1</a>
-        <br><a href="Bài 2.2.html">Bài tập 2.2</a>
-        <br><a href="Bài 2.3.html">Bài tập 2.3</a>
-        <br><a href="Bài 3.html">Bài tập 3</a>o
-        <br><a href="bài 4.html">Bài tập 4</a>
-        
-        <h2>Bài tập buổi 2</h2>
-        <br><a href="buoi2bai1.html">Bài tập 1</a>
-        <br><a href="buoi2bai2a.html">Bài tập 2.1</a>
-        <br><a href="buoi2bai2b.html">Bài tập 2.2</a>
-        <br><a href="buoi2bai2c.html">Bài tập 2.3</a>
-        <br><a href="buoi2bai3.html">Bài tập 3</a>
-
-        <h2>Bài tập buổi 3</h2>
-        <br><a href="buoi4bai1a.html">Bài tập 1.1</a>
-        <br><a href="buoi4bai1b.html">Bài tập 1.2</a>
-        <br><a href="buoi4bai2.html">Bài tập 2</a>
-        <br><a href="buoi4bai3a.html">Bài tập 3.1</a>
-        <br><a href="buoi4bai3b.html">Bài tập 3.2</a>
-        <br><a href="buoi4bai3c.html">Bài tập 3.3</a>
-        <br><a href="buoi4bai4.html">Bài tập 4</a>
-
+    <section id="dinhhuong" class="fade-in">
+        <div class="container">
+            <h2>Định hướng công việc</h2>
+            <ul>
+                <li>Thành thạo thiết kế đồ họa và lập trình web</li>
+                <li>Phát triển các sản phẩm phần mềm phục vụ doanh nghiệp và người dùng cá nhân</li>
+                <li>Học hỏi và cập nhật công nghệ mới để áp dụng vào thực tế</li>
+            </ul>
+        </div>
+    </section>  
+    <section id="video" class="fade-in">
+        <div class="container">
+            <h2>Video Giới Thiệu</h2>
+            <video controls>
+                <source src="tet vui.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Liên Hệ</h2>
+            <a href="mailto:hmt6.mh273@gmail.com">📧 Gửi Email</a>
+        </div>
+    </section>
+    <section id="baitap" class="fade-in">
+        <div class="container">
+            <h2>Bài tập</h2>
+            <h4>Buổi 1</h4>
+            <ul class="exercise-list">
+                <li><a href="Bài 1.html">Bài tập 1</a></li>
+                <li><a href="Bài 2.html">Bài tập 2.1</a></li>
+                <li><a href="Bài 2.2.html">Bài tập 2.2</a></li>
+                <li><a href="Bài 2.3.html">Bài tập 2.3</a></li>
+                <li><a href="Bài 3.html">Bài tập 3</a></li>
+                <li><a href="bài 4.html">Bài tập 4</a></li>
+            </ul>
+            <h4>Buổi 2</h4>
+            <ul class="exercise-list">
+                <li><a href="buoi2bai1.html">Bài tập 1</a></li>
+                <li><a href="buoi2bai2a.html">Bài tập 2.1</a></li>
+                <li><a href="buoi2bai2b.html">Bài tập 2.2</a></li>
+                <li><a href="buoi2bai2c.html">Bài tập 2.3</a></li>
+                <li><a href="buoi2bai3.html">Bài tập 3</a></li>
+            </ul>
+            <h4>Buổi 3</h4>
+            <ul class="exercise-list">
+                <li><a href="buoi4bai1a.html">Bài tập 1.1</a></li>
+                <li><a href="buoi4bai1b.html">Bài tập 1.2</a></li>
+                <li><a href="buoi4bai2.html">Bài tập 2</a></li>
+                <li><a href="buoi4bai3a.html">Bài tập 3.1</a></li>
+                <li><a href="buoi4bai3b.html">Bài tập 3.2</a></li>
+                <li><a href="buoi4bai3c.html">Bài tập 3.3</a></li>
+                <li><a href="buoi4bai4.html">Bài tập 4</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="trangchu" class="fade-in">
+        <div class="container">
+            <b><a href="file:///C:/Users/admin/Downloads/buoi4bai4.html#trangchu">Quay lại trang chủ</a></b>
+        </div>
+    </section>
+    <script>
+        ScrollReveal().reveal('.fade-in', { delay: 200, distance: '50px', origin: 'bottom', duration: 1000 });
+    </script>
 </body>
-</html>        
+</html>
