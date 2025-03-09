@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3Schools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar {
+            display: flex;
+            gap: 10px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover,
+        .navbar .active {
+            background-color: #09b777;
+            border-radius: 5px;
+        }
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .nav-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .nav-btn:hover {
+            background-color: #037f54;
+        }
+        .example-box {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .code-box {
+            background-color: #fff;
+            padding: 10px;
+            border-left: 5px solid #04AA6D;
+            font-family: monospace;
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+            overflow-x: auto;
+        }
+
+        .example-explained {
+            margin-top: 20px;
+        }
+
+        .highlight {
+            background-color: #ffebeb;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: red;
+        }
+
+        .info-box {
+            background-color: #ffffcc;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="#"><a href="file:///C:/Users/admin/Downloads/buoi4bai4.html#trangchu">TRANG CHỦ</a></a>
+            <a href="#">HTML</a>
+            <a href="#" class="active">CSS</a>
+            <a href="#">JAVASCRIPT</a>
+            <a href="#">SQL</a>
+            <a href="#">PYTHON</a>
+            <a href="#">JAVA</a>
+            <a href="#">PHP</a>
+            <a href="#">HOW TO</a>
+            <a href="#">W3.CSS</a>
+            <a href="#">C</a>
+            <a href="#">C++</a>
+            <a href="#">C#</a>
+            <a href="#">BOOTSTRAP</a>
+        
+        </div>
+    </div>
+    <div class="content">
+        <h1 style="font-size:50px;">CSS Syntax</h1>
+        <div class="nav-buttons">
+            <a href="#" class="nav-btn">Previous</a>
+            <a href="#" class="nav-btn">Next</a>
+        </div>
+        <hr><br>
+        <p>A CSS rule consists of a selector and a declaration block.</p><br>
+        <hr>
+        <h2 style="font-size:30px;">CSS Syntax</h2>
+        <img src="https://www.w3schools.com/css/img_selector.gif" alt="CSS Selector">
+        <p>The selector points to the HTML element you want to style.</p>
+        <p>The declaration block contains one or more declarations separated by semicolons.</p>
+        <div class="example-box">
+            <h2 style="font-size:25px;">Example</h2>
+            <p>In this example all <code>&lt;p&gt;</code> elements will be center-aligned, with a red text color:</p>
+            <div class="code-box">
+                p {<br>
+                &nbsp;&nbsp;color: red;<br>
+                &nbsp;&nbsp;text-align: center;<br>
+                }
+            </div>
+            <a href="#" class="nav-btn">Try it Yourself »</a>
+        </div>
+        <div class="example-explained">
+            <h2 style="font-size:25px;">Example Explained</h2>
+            <ul>
+                <li><span class="highlight">p</span> is a selector in CSS (it points to the HTML element you want to style: <code>&lt;p&gt;</code>).</li>
+                <li><span class="highlight">color</span> is a property, and <span class="highlight">red</span> is the property value.</li>
+                <li><span class="highlight">text-align</span> is a property, and <span class="highlight">center</span> is the property value.</li>
+            </ul>
+        </div>
+        <p class="info-box">
+            You will learn much more about CSS selectors and CSS properties in the next chapters!
+        </p>
+    </div>
+</body>
+</html>
