@@ -7,18 +7,83 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid lightskyblue;
+            padding-bottom: 5px;
+        }
+        .info {
+            margin: 10px 0;
+        }
+        .info i {
+            color: lightskyblue;
+            margin-right: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e3f1ff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        ul li i {
+            margin-right: 10px;
+            color: lightskyblue;
+        }
         .navbar {
+            background-color: #a4c8e1;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background: #A7C7E7;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
             z-index: 1000;
         }
+        .navbar {
+            background-color: #a4c8e1;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+.search-box {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
         .menu {
             list-style: none;
             display: flex;
@@ -36,13 +101,8 @@
         .menu li a:hover {
             color: #f4a261;
         }
-        #search {
-            padding: 5px;
-            border: none;
-            border-radius: 5px;
-        }
-        body {
-            padding-top: 50px;
+       body {
+            padding-top: 60px;
         }
         .exercise-list {
             display: flex;
@@ -82,65 +142,63 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo" style="color: white; font-weight: bold;">Mai Hương</div>
-            <ul class="menu">
-                <li><a href="#trangchu">TRANG CHỦ</a></li>
-                <li><a href="#about">Giới thiệu</a></li>
-                <li><a href="#info">Thông tin cá nhân</a></li>
-                <li><a href="#skills">Sở thích & Kỹ năng</a></li>
-                <li><a href="#dinhhuong">Định hướng</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
-                <li><a href="#baitap">Bài tập</a></li>
-            </ul>
-            <input type="text" id="search" placeholder="Tìm kiếm...">
-        </nav>
-    </header>
-    <section id="trangchu" class="fade-in">
-        <div class="container">
-            <b><a href="https://mhuong273.github.io/Thietkeweb/#baitap">Trang chủ</a></b>
+        <div class="navbar">
+            <span style="font-weight: bold; color: white;">Mai Hương</span>
+            <nav>
+                <a href="#trangchu">TRANG CHỦ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#info">Thông tin cá nhân</a>
+                <a href="#skills">Sở thích & Kỹ năng</a>
+                <a href="#dinhhuong">Định hướng</a>
+                <a href="#video">Video</a>
+                <a href="#contact">Liên hệ</a>
+                <a href="#baitap">Bài tập</a>
+            </nav>
+            <input type="text" class="search-box" placeholder="Tìm kiếm...">
         </div>
-    </section>
+    </header>
+    
+    </header>
     <section id="about" class="fade-in">
         <div class="container">
             <h2>Giới thiệu bản thân</h2>
             <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/481114634_1026445569317489_5756482359229092189_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGdBnsJjgrHdhK-yjfvSnOfBS0ABZnlozoFLQAFmeWjOpP2aHMIh8wQeR-tbU9Ld8iucW9cJ8DmQlhjDJIp1NKG&_nc_ohc=Z8lAAER7xDMQ7kNvgE4qtN6&_nc_oc=AdjvEMWkzY-4fVAZa2ExQWtcAz9LbJuvgor3B7oPO_5XplvvsrNFCTHL16-Z0iqGqhdd_why219mJAagvvKd19K7&_nc_zt=23&_nc_ht=scontent.fhan2-3.fna&_nc_gid=AUazFDOPbGQc5qXxPyxwSzy&oh=00_AYG-g_0r4NsdZZLyQvprv0auBJ1DQmK5TGRlMAh6vY1gOg&oe=67D230A4" alt="Ảnh đại diện">
-            <p>Xin chào! 👋<br>Mình là Đặng Mai Hương, sinh viên năm nhất ngành Công nghệ Thông tin tại Trường Đại học Thủ đô Hà Nội. Mình là một người năng động, sáng tạo, vui vẻ và hòa đồng.</p>
+            <div class="container">   
+            <h2>👋 Xin chào!</h2>
+                <p>Mình là <strong>Đặng Mai Hương</strong>, sinh viên năm nhất ngành Công nghệ Thông tin tại Trường Đại học Thủ đô Hà Nội.</p>
+                </div>
         </div>
     </section>
-    
-    <section id="info" class="fade-in">
-        <div class="container">
-            <h2>Thông Tin Cá Nhân</h2>
-            <ul>
-                <li><strong>Email:</strong> hmt6.mh273@gmail.com</li>
-                <li><strong>Số điện thoại:</strong> 0336236215</li>
-                <li><strong>Địa chỉ:</strong> TT Chúc Sơn, huyện Chương Mỹ, TP Hà Nội</li>
-            </ul>
-        </div>
-    </section> 
-    <section id="skills" class="fade-in">
-        <div class="container">
-            <h2>Sở thích & Kỹ năng</h2>
-            <ul>
-                <li>✅ Đam mê thiết kế đồ họa.</li>
-                <li>✅ Kỹ năng mềm: Làm việc nhóm, tư duy logic, giải quyết vấn đề.</li>
-                <li>✅ Sở thích cá nhân: Chụp ảnh, nghe nhạc, du lịch, nấu ăn và chơi game.</li>
-            </ul>
-        </div>
-    </section>
+        <section id="info" class="fade-in">
+                    <div class="container">
+                <h2>Thông Tin Cá Nhân</h2>
+                <p class="info"><i class="fas fa-envelope"></i><strong>Email:</strong> hmt6.mh273@gmail.com</p>
+                <p class="info"><i class="fas fa-phone"></i><strong>Số điện thoại:</strong> 0336236215</p>
+                <p class="info"><i class="fas fa-map-marker-alt"></i><strong>Địa chỉ:</strong> TT Chúc Sơn, huyện Chương Mỹ, TP Hà Nội</p>
+                    </div>
+                </section>
+                <section id="skills" class="fade-in">
+                    <div class="container">
+                <h2>Sở thích & Kỹ năng</h2>
+                <ul>
+                    <li><i class="fas fa-paint-brush"></i> Đam mê thiết kế đồ họa.</li>
+                    <li><i class="fas fa-users"></i> Kỹ năng mềm: Làm việc nhóm, tư duy logic, giải quyết vấn đề.</li>
+                    <li><i class="fas fa-music"></i> Sở thích: Chụp ảnh, nghe nhạc, du lịch, nấu ăn và chơi game.</li>
+                </ul>
+                    </div>
+                </section>
+                <section id="dinhhuong" class="fade-in">
+                    <div class="container">
+                    <h2>Định hướng công việc</h2>
+                    <ul>
+                        <li><i class="fas fa-laptop-code"></i> Thành thạo thiết kế đồ họa và lập trình web.</li>
+                        <li><i class="fas fa-project-diagram"></i> Phát triển các sản phẩm phần mềm phục vụ doanh nghiệp và người dùng cá nhân.</li>
+                        <li><i class="fas fa-graduation-cap"></i> Học hỏi và cập nhật công nghệ mới để áp dụng vào thực tế.</li>
+                    </ul>
 
-    <section id="dinhhuong" class="fade-in">
-        <div class="container">
-            <h2>Định hướng công việc</h2>
-            <ul>
-                <li>Thành thạo thiết kế đồ họa và lập trình web</li>
-                <li>Phát triển các sản phẩm phần mềm phục vụ doanh nghiệp và người dùng cá nhân</li>
-                <li>Học hỏi và cập nhật công nghệ mới để áp dụng vào thực tế</li>
-            </ul>
-        </div>
-    </section>  
+                    </div> 
+                </section>
+            </div>
     <section id="video" class="fade-in">
         <div class="container">
             <h2>Video Giới Thiệu</h2>
@@ -192,6 +250,7 @@
                 <li><a href="12032025.html">Bài tập 1</a></li>
                 <li><a href="12032025a.html">Bài tập 2</a></li>
             </ul>
+
         </div>
     </section>
     <section id="trangchu" class="fade-in">
