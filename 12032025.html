@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Ngang và Dọc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.menu-ngang {
+    background-color: #2d2f31;
+    padding: 7px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.menu-ngang::-webkit-scrollbar {
+    display: none;
+}
+.menu-ngang ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    padding: 0 10px;
+}
+.menu-ngang ul li {
+    margin: 0 3px;
+}
+.menu-ngang ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+.menu-ngang ul li a.active {
+    background-color: #4CAF50;
+}
+.menu-ngang ul li a:hover {
+    background-color: black;
+}
+.container {
+    display: flex;
+    margin-top: 40px;
+}
+.menu-doc {
+    width: 250px;
+    height: 100vh;
+    background: #f4f4f4;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    overflow-y: auto;
+}
+.menu-doc::-webkit-scrollbar {
+    width: 8px;
+}
+.menu-doc::-webkit-scrollbar-track {
+    background: #ddd;
+}
+.menu-doc::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+.menu-doc h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.menu-doc ul {
+    list-style: none;
+}
+.menu-doc ul li {
+    margin: 5px 0;
+}
+.menu-doc ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.menu-doc ul li a:hover {
+    background-color:lightgrey;
+    color: black;
+}
+.menu-doc ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    max-width: 900px;
+    background-color: white;
+}
+.nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+.nav-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+.nav-btn:hover {
+            background-color: #037f54;
+        }
+        .example-box {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .code-box {
+            background-color: #fff;
+            padding: 10px;
+            border-left: 5px solid #04AA6D;
+            font-family: monospace;
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+            overflow-x: auto;
+        }
+        .example-explained {
+            margin-top: 20px;
+        }
+
+        .highlight {
+            background-color: #ffebeb;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: red;
+        }
+        .info-box {
+            background-color: #ffffcc;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .box {
+            background: #e6f7e6;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+}
+        .code-box2 {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid green;
+            font-family: monospace;
+        }
+        .button-container {
+            margin-top: 15px;
+        }
+        .try-button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .try-button:hover {
+            background-color: #038a5c;
+        }
+        .btn {
+            background: #037f54;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+}
+        .btn-green {
+            background: #037f54;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .grid div {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .grid div:hover {
+            background-color: black;
+            color: white;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: lightblue;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: lightgrey;
+            }
+</style> 
+<body>
+    <nav class="menu-ngang">
+        <ul>
+            <li><a href="#" class="active">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JAVASCRIPT</a></li>
+            <li><a href="#">SQL</a></li>
+            <li><a href="#">PYTHON</a></li>
+            <li><a href="#">JAVA</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">HOW TO</a></li>
+            <li><a href="#">W3.CSS</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">C#</a></li>
+            <li><a href="#">BOOTSTRAP</a></li>
+            <li><a href="#">REACT</a></li>
+            <li><a href="#">MYSQL</a></li>
+            <li><a href="#">JQUERY</a></li>
+            <li><a href="#">EXCEL</a></li>
+            <li><a href="#">XML</a></li>
+            <li><a href="#">DJANGO</a></li>
+            <li><a href="#">NUMPY</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="menu-doc">
+            <h2>HTML Tutorial</h2>
+            <ul>
+                <li><a href="#" class="active">HTML HOME</a></li>
+                <li><a href="#">HTML Introduction</a></li>
+                <li><a href="#">HTML Editors</a></li>
+                <li><a href="#">HTML Basic</a></li>
+                <li><a href="#">HTML Elements</a></li>
+                <li><a href="#">HTML Attributes</a></li>
+                <li><a href="#">HTML Headings</a></li>
+                <li><a href="#">HTML Paragraphs</a></li>
+                <li><a href="#">HTML Styles</a></li>
+                <li><a href="#">HTML Formatting</a></li>
+                <li><a href="#">HTML Quotations</a></li>
+                <li><a href="#">HTML Comments</a></li>
+                <li><a href="#">HTML Colors</a></li>
+                <li><a href="#">HTML CSS</a></li>
+                <li><a href="#">HTML Links</a></li>
+                <li><a href="#">HTML Images</a></li>
+                <li><a href="#">HTML Favicon</a></li>
+                <li><a href="#">HTML Page Title</a></li>
+                <li><a href="#">HTML Tables</a></li>
+                <li><a href="#">HTML Lists</a></li>
+                <li><a href="#">HTML Block & Inline</a></li>
+                <li><a href="#">HTML Div</a></li>
+                <li><a href="#">HTML Classes</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1 style="font-size:40px;">HTML Tutorial</h1>
+            <div class="nav-buttons">
+            <a href="#" class="nav-btn">Previous</a>
+            <a href="#" class="nav-btn">Next</a>
+        </div>
+        <hr>
+        <div class="box">
+            <h1 style="font-size: 30px;">Learn HTML</h1><br>
+            <p>HTML is the standard markup language for web pages.</p><br>
+            <p>With HTML you can create your own website.</p><br>
+            <p>HTML is easy to learn - You will enjoy it!</p><br>
+            <button class="btn-green">Start learning HTML now »</button>
+        </div><br>
+        <hr><br>
+        <h1>Easy Learning with HTML "Try it Yourself"</h1>
+        <br><p>With our "Try it Yourself" editor, you can edit the HTML code and view the result:</p>
+        
+        <br><h2>Example</h2>
+        <br><div class="code-box2">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+        <div class="button-container">
+            <button class="try-button">Try it Yourself »</button>
+        </div>
+        <br>
+        <p><strong>Click on the "Try it Yourself" button to see how it works.</strong></p>  
+        <br><hr><br>
+        <h2>HTML References</h2>
+        <br><p>At W3Schools you will find complete references about HTML elements, attributes, events, color names, entities, character-sets, URL encoding, language codes, HTTP messages, browser support, and more:</p>
+        <div class="grid">
+            <div>HTML Elements</div>
+            <div>Browser Support</div>
+            <div>Attributes</div>
+            <div>Global Attributes</div>
+            <div>Event Attributes</div>
+            <div>Color Names</div>
+            <div>Canvas</div>
+            <div>Audio/Video DOM</div>
+            <div>Character Sets</div>
+            <div>URL Encoding</div>
+            <div>Language Codes</div>
+            <div>Country Codes</div>
+            <div>HTTP Messages</div>
+            <div>Px to Em Converter</div>
+            <div>Keyboard Shortcuts</div>
+        </div>
+        <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+    </div>
+</body>
+</html>
