@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Hot</title>
+    <style>
+        body {
+            background-color: rgb(59, 0, 59);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .album-container {
+            width: 90%;
+            max-width: 1200px;
+        }
+        .album-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .album-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .album-item {
+            position: relative;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .album-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+        }
+        .album-item img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .album-name {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .artist-name {
+            font-size: 14px;
+            color: #ccc;
+        }
+        .back-home-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-home {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(184, 0, 184);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(59, 0, 59);
+        }
+    </style>
+</head>
+<body>
+    <div class="album-container">
+        <div class="album-title">Album Hot</div>
+        <div class="album-list">
+            <div class="album-item">
+                <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/c/a/9/0/ca90d34cb77b634ca65d1ca065890aeb.jpg" alt="Baby Honey">
+                <div class="album-name">Baby Honey (Single)</div>
+                <div class="artist-name">DUYDATD, Duk Ank, Kiyoshi Phan</div>
+            </div>
+            <div class="album-item">
+                <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/3/2/3/7/3237500246258010bede504f569c8fca.jpg" alt="Cừu Non">
+                <div class="album-name">Cừu Non (Single)</div>
+                <div class="artist-name">Châu Dương, Đinh Quang Đạt</div>
+            </div>
+            <div class="album-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUAp8b2tV9-rgcg3fGwZhu2-OwSY7cSwaww&s" alt="Người Ơi Đừng Bỏ Quê">
+                <div class="album-name">Người Ơi Đừng Bỏ Quê</div>
+                <div class="artist-name">Hồ Văn Cường</div>
+            </div>
+            <div class="album-item">
+                <img src="https://photo-resize-zmp3.zmdcdn.me/w256_r1x1_jpeg/cover/7/9/4/2/794229c0dc49ac8ad17ec0ce5b8a84cb.jpg" alt="Nghe Nói Anh Yêu Em">
+                <div class="album-name">Nghe Nói Anh Yêu Em</div>
+                <div class="artist-name">Châu Khải Phong, Ngân Ngân</div>
+            </div>
+            <div class="album-item">
+                <img src="https://photo-resize-zmp3.zadn.vn/w600_r1x1_jpeg/cover/a/c/6/b/ac6b606247f7ce4dea476ad57f7ec8ed.jpg" alt="Tự Ta Đã Tình Tự Ta Đau">
+                <div class="album-name">Tự Ta Đã Tình Tự Ta Đau</div>
+                <div class="artist-name">Bạch Công Khanh</div>
+            </div>
+        </div>
+    </div>
+    <div class="back-home-container">
+            <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+        </div>
+</body>
+</html>
