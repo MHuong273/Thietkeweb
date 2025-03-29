@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+    scroll-behavior: smooth;
+    }
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #A7C7E7;
+            --text-color: #333;
+            --background-color: #f3f9ff;
+            --white: #ffffff;
+            --hover-color: #005f8a;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            padding-top: 60px;
+            background: var(--background-color);
+        }
+
+        .container {
+            max-width: 800px;
+            background: var(--white);
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        .navbar {
+            background-color: var(--secondary-color);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .search-box {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: var(--secondary-color);
+            list-style: none;
+            padding: 10px 0;
+            min-width: 150px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input[type="checkbox"] {
+            display: none;
+        } 
+  .dropdown label {
+    cursor: pointer;
+    background: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  #toggle-menu:checked ~ .dropdown-menu {
+    display: block;
+  }
+
+        .dropdown-menu li {
+            padding: 8px 15px;
+        }
+
+        .dropdown-menu a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 8px 12px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: var(--hover-color);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+
+        .exercise-label {
+            display: block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .exercise-label:hover {
+            background-color: var(--hover-color);
+        }
+        #contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f9ff;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+        #contact h2 {
+            color: #0077b6;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .contact-info i {
+            color: #0077b6;
+            margin-right: 10px;
+        }
+        .contact-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+            resize: none;
+        }
+        .contact-form button {
+            background-color: #0077b6;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #005f8a;
+        }
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info, .contact-form {
+                text-align: center;
+                width: 100%;
+            }
+        }
+        .video-wrapper {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+}
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 2px solid #A7C7E7;/
+        }
+        .exercise-list {
+            display: none;
+            list-style: none;
+            padding-left: 20px;
+        }
+        .exercise-list li {
+            list-style: none;
+            background: #A7C7E7;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .exercise-list li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .exercise-list li a:hover {
+            color: #f4a261;
+        }
+        .exercise-group input {
+    display: none;
+}
+
+.exercise-label {
+    display: block;
+    background-color: #A7C7E7;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.exercise-group input:checked + .exercise-label + .exercise-list {
+    display: block;
+}
+.exercise-label:hover {
+    background-color: #86B6F6;
+}
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <span style="font-weight: bold; color: white;">Mai Hương</span>
+            <nav>
+                <a href="#trangchu">TRANG CHỦ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#info">Thông tin cá nhân</a>
+                <a href="#skills">Sở thích & Kỹ năng</a>
+                <a href="#dinhhuong">Định hướng</a>
+                <a href="#video">Video</a>
+                <a href="#contact">Liên hệ</a>
+                <div class="dropdown">
+                    <!-- Checkbox để điều khiển menu -->
+                    <input type="checkbox" id="toggle-menu">
+                    <label for="toggle-menu" class="dropdown-label">Bài tập ▼</label>
+                    
+                    <!-- Menu con -->
+                    <ul class="dropdown-menu">
+                        <li><a href="#buoi1">Buổi 1</a></li>
+                        <li><a href="#buoi2">Buổi 2</a></li>
+                        <li><a href="#buoi3">Buổi 3</a></li>
+                        <li><a href="#buoi4">Buổi 4</a></li>
+                        <li><a href="#buoi5">Buổi 5</a></li>
+                        <li><a href="#buoi6">Buổi 6</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <input type="text" class="search-box" placeholder="Tìm kiếm...">
+        </div>
+    </header>
+    
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>Giới thiệu bản thân</h2>
+            <p>Mình là <strong>Đặng Mai Hương</strong>, sinh viên năm nhất ngành Công nghệ Thông tin tại Trường Đại học Thủ đô Hà Nội.</p>
+        </div>
+    </section>
+    <section id="info" class="fade-in">
+        <div class="container">
+    <h2>Thông Tin Cá Nhân</h2>
+    <p class="info"><i class="fas fa-envelope"></i><strong>Email:</strong> hmt6.mh273@gmail.com</p>
+    <p class="info"><i class="fas fa-phone"></i><strong>Số điện thoại:</strong> 0336236215</p>
+    <p class="info"><i class="fas fa-map-marker-alt"></i><strong>Địa chỉ:</strong> TT Chúc Sơn, huyện Chương Mỹ, TP Hà Nội</p>
+        </div>
+    </section>
+    <section id="skills" class="fade-in">
+        <div class="container">
+    <h2>Sở thích & Kỹ năng</h2>
+    <ul>
+        <li><i class="fas fa-paint-brush"></i> Đam mê thiết kế đồ họa.</li>
+        <li><i class="fas fa-users"></i> Kỹ năng mềm: Làm việc nhóm, tư duy logic, giải quyết vấn đề.</li>
+        <li><i class="fas fa-music"></i> Sở thích: Chụp ảnh, nghe nhạc, du lịch, nấu ăn và chơi game.</li>
+    </ul>
+        </div>
+    </section>
+    <section id="dinhhuong" class="fade-in">
+        <div class="container">
+        <h2>Định hướng công việc</h2>
+        <ul>
+            <li><i class="fas fa-laptop-code"></i> Thành thạo thiết kế đồ họa và lập trình web.</li>
+            <li><i class="fas fa-project-diagram"></i> Phát triển các sản phẩm phần mềm phục vụ doanh nghiệp và người dùng cá nhân.</li>
+            <li><i class="fas fa-graduation-cap"></i> Học hỏi và cập nhật công nghệ mới để áp dụng vào thực tế.</li>
+        </ul>
+
+        </div> 
+    </section>
+</div>
+<section id="video" class="fade-in">
+    <div class="container">
+        <h2>Video Giới Thiệu</h2>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="tet vui.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>📞 Liên Hệ</h2>
+            <p>Hãy liên hệ với mình nếu bạn có bất kỳ câu hỏi nào!</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:hmt6.mh273@gmail.com">hmt6.mh273@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <strong>Số điện thoại:</strong> 0336 236 215</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Địa chỉ:</strong> TT Chúc Sơn, Chương Mỹ, Hà Nội</p>
+                </div>
+                <div class="contact-form">
+                    <input type="text" placeholder="Họ và Tên" required>
+                    <input type="email" placeholder="Email của bạn" required>
+                    <textarea placeholder="Nội dung tin nhắn..." required></textarea>
+                    <button type="submit">Gửi Tin Nhắn</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="baitap" class="fade-in">
+        <div class="container">
+            <h2>Bài tập</h2>
+    
+            <section id="buoi1">
+            <div class="exercise-group">
+                <input type="checkbox" id="buoi1-toggle">
+                <label for="buoi1-toggle" class="exercise-label">Buổi 1 ▼</label>
+                <ul class="exercise-list">
+                    <li><a href="Bài 1.html">Bài tập 1</a></li>
+                    <li><a href="Bài 2.html">Bài tập 2.1</a></li>
+                    <li><a href="Bài 2.2.html">Bài tập 2.2</a></li>
+                    <li><a href="Bài 2.3.html">Bài tập 2.3</a></li>
+                    <li><a href="Bài 3.html">Bài tập 3</a></li>
+                    <li><a href="bài 4.html">Bài tập 4</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="buoi2">
+            <div class="exercise-group">
+                <input type="checkbox" id="buoi2-toggle">
+                <label for="buoi2-toggle" class="exercise-label">Buổi 2 ▼</label>
+                <ul class="exercise-list">
+                    <li><a href="buoi2bai1.html">Bài tập 1</a></li>
+                    <li><a href="buoi2bai2a.html">Bài tập 2.1</a></li>
+                    <li><a href="buoi2bai2b.html">Bài tập 2.2</a></li>
+                    <li><a href="buoi2bai2c.html">Bài tập 2.3</a></li>
+                    <li><a href="buoi2bai3.html">Bài tập 3</a></li>
+    
+                </ul>
+            </div>
+        </section>
+        <section id="buoi3">
+            <div class="exercise-group">
+                <input type="checkbox" id="buoi3-toggle">
+                <label for="buoi3-toggle" class="exercise-label">Buổi 3 ▼</label>
+                <ul class="exercise-list">
+                    <li><a href="buoi4bai1a.html">Bài tập 1.1</a></li>
+                    <li><a href="buoi4bai1b.html">Bài tập 1.2</a></li>
+                    <li><a href="buoi4bai2.html">Bài tập 2</a></li>
+                    <li><a href="buoi4bai3a.html">Bài tập 3.1</a></li>
+                    <li><a href="buoi4bai3b.html">Bài tập 3.2</a></li>
+                    <li><a href="buoi4bai3c.html">Bài tập 3.3</a></li>
+                    <li><a href="buoi4bai3d.html">Bài tập 3.4</a></li>
+                    <li><a href="buoi4bai4.html">Bài tập 4</a></li>
+    
+                </ul>
+            </div>
+        </section>
+
+        <section id="buoi4">
+            <div class="exercise-group">
+                <input type="checkbox" id="buoi4-toggle">
+                <label for="buoi4-toggle" class="exercise-label">Buổi 4 ▼</label>
+                <ul class="exercise-list">
+                    <li><a href="12032025.html">Bài tập 1</a></li>
+                    <li><a href="12032025a.html">Bài tập 2</a></li>
+        
+                </ul>
+            </div>
+        </section>
+        <section id="buoi5">
+            <div class="exercise-group">
+                <input type="checkbox" id="buoi5-toggle">
+                <label for="buoi5-toggle" class="exercise-label">Buổi 5 ▼</label>
+                    <ul class="exercise-list">
+                        <li><a href="baitap19032025.html">Float</a></li>
+                        <li><a href="baitap19032025b.html">Flexbox </a></li>
+                        <li><a href="baitap19032025c.html">Grid</a></li>
+                        <li><a href="buoi5bai1.html">Bài 1</a></li>
+                        <li><a href="buoi5bai2.html">Bài 2</a></li>
+                        <li><a href="buoi5bai3.html">Bài 3</a></li>
+                        </ul>
+                
+            </div>
+        </section>
+        <section id="buoi6">
+            <div class="exercise-group">
+                <input type="checkbox" id="buoi6-toggle">
+                <label for="buoi6-toggle" class="exercise-label">Buổi 6 ▼</label>
+                    <ul class="exercise-list">
+                        <li><a href="26032025a.html">Bài 1a trên lớp</a></li>
+                        <li><a href="26032025a1.html">Bài 1b trên lớp </a></li>
+                        <li><a href="26032025b.html">Bài 2 trên lớp</a></li>
+                        <li><a href="buoi6bai1.html">Bài 1 </a></li>
+                        </ul>
+                
+            </div>
+        </section>
+
+        </div>
+    </section>
+    <section id="trangchu" class="fade-in">
+        <div class="container">
+            <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025. Dự án học tập của Mai Hương.</p>
+    </footer>
+</body>
+</html>
