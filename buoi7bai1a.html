@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 1 - Hello World</title>
+</head>
+<style> 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+  }
+  h1 {
+    color: #3498db;
+    font-size: 48px;
+  }
+  .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+</style>
+<body>
+  <h1 id="output"></h1>
+
+  <script>
+    document.getElementById("output").innerText = "Hello world";
+    alert("Hello world");
+  </script>
+
+<section id="trangchu" class="fade-in">
+  <div>
+      <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+  </div>
+</section>
+</body>
+</html>
