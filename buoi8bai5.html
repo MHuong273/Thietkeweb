@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide Show Ảnh</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .slideshow-container {
+      position: relative;
+      width: 600px;
+      max-width: 100%;
+    }
+    .slide {
+      display: none;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      user-select: none;
+    }
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+    .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+  </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="slide">
+    <img src="https://app.gak.vn/storage/uploads/Xv4c0WZA7WqGOkskavde57TdcQXruwtTjSzNi025.jpg" alt="Ảnh 1">
+  </div>
+  <div class="slide">
+    <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/avatar-anh-meo-cute-3.jpg" alt="Ảnh 2">
+  </div>
+  
+  <div class="slide">
+    <img src="https://blog.maika.ai/wp-content/uploads/2024/02/anh-meo-meme-21.jpg" alt="Ảnh 3">
+  </div>
+  <div class="slide">
+    <img src="https://anhcute.net/wp-content/uploads/2024/10/Anh-meme-meo-buon-dang-yeu.jpg" alt="Ảnh 4">
+  </div>
+  <div class="slide">
+    <img src="https://app.gak.vn/storage/uploads/jrkBNy6Smc3rDezWrhcAyMFD4CAfShZu4xc8Y5WO.jpg" alt="Ảnh 5">
+  </div>
+    <div class="slide">
+        <img src="https://inkythuatso.com/uploads/thumbnails/800/2022/05/anh-meo-che-anh-meo-bua-15-31-09-19-00.jpg" alt="Ảnh 6">
+    </div>
+  <div class="slide">
+    <img src="https://1.bp.blogspot.com/-ciJx92ftXls/YGLZXgbmRgI/AAAAAAAArCg/iA9A_uU0qewj8ZgCpv6mCRqNuvo2YlZZACNcBGAsYHQ/s0/1d83a6d88d8be5b041a9a98fd5048311.jpeg" alt="Ảnh 7">
+    </div>
+  
+  <button class="prev" onclick="nextSlide()">❮</button>
+
+  
+  <button class="next" onclick="prevSlide()">❯</button>
+</div>
+<section id="trangchu" class="fade-in">
+    <div class="container">
+        <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+    </div>
+</section>
+<script>
+  var slideIndex = 0;
+  var slides = document.getElementsByClassName("slide");
+
+  function showSlide(index) {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[index].style.display = "block";
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  
+  showSlide(slideIndex);
+</script>
+
+</body>
+</html>
