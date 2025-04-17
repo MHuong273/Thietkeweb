@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ẩm Thực Việt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff914d;
+      padding: 15px 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      position: absolute;
+      background-color: #ffa366;
+      top: 42px;
+      left: 0;
+      display: none;
+      min-width: 160px;
+    }
+
+    nav ul ul li a:hover {
+      background-color: #ffd1b3;
+      color: #000;
+    }
+
+    nav ul ul li a {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        background-color: #ff914d;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul ul {
+        position: static;
+        background-color: #ffa366;
+      }
+    }
+
+    main {
+      padding: 100px 20px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .food-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .food-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .food-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .food-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .food-item h3 {
+      font-size: 20px;
+      color: #e65c00;
+      padding: 10px;
+    }
+
+    .food-item p {
+      font-size: 16px;
+      color: #555;
+      padding: 0 10px 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #ff7043;
+      color: white;
+    }
+    .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Ẩm Thực Việt</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav>
+    <ul id="menu">
+      <li><a href="#">Trang chủ</a></li>
+      <li>
+        <a href="#">Món ăn ▼</a>
+        <ul>
+          <li><a href="#">Món Việt</a></li>
+          <li><a href="#">Món Á</a></li>
+          <li><a href="#">Món Âu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Thực đơn ▼</a>
+        <ul>
+          <li><a href="#">Bữa sáng</a></li>
+          <li><a href="#">Bữa trưa</a></li>
+          <li><a href="#">Bữa tối</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Chào mừng đến với thế giới ẩm thực!</h1>
+  <p>Khám phá những món ăn ngon, công thức độc đáo và phong cách nấu ăn đa dạng khắp mọi miền đất nước và thế giới.</p>
+
+  <div class="food-gallery">
+    <div class="food-item">
+      <img src="https://bizweb.dktcdn.net/100/477/987/products/pho-bo-ha-noi-jpeg.jpg?v=1712628941747" alt="Phở bò">
+      <h3>Phở Bò</h3>
+      <p>Món ăn truyền thống của Việt Nam với nước dùng thơm ngon và thịt bò mềm mại.</p>
+    </div>
+    <div class="food-item">
+      <img src="https://assets.unileversolutions.com/recipes-v2/157768.jpg" alt="Chả giò">
+      <h3>Chả Giò</h3>
+      <p>Món khai vị giòn rụm với nhân thịt và rau củ được cuộn trong bánh tráng và chiên vàng.</p>
+    </div>
+    <div class="food-item">
+      <img src="https://media.vov.vn/sites/default/files/styles/large/public/2024-12/cach_an_banh_mi_1.jpg" alt="Bánh mì">
+      <h3>Bánh Mì</h3>
+      <p>Món ăn nhanh nổi tiếng kết hợp giữa bánh mì giòn rụm và nhân thịt, pate, rau thơm.</p>
+    </div>
+    <div class="food-item">
+        <img src="https://heyyofoods.com/wp-content/uploads/2024/03/3-4.jpg" alt="Gỏi cuốn">
+        <h3>Gỏi Cuốn</h3>
+        <p>Món ăn thanh mát với tôm, thịt, bún, rau sống cuốn trong bánh tráng, chấm nước mắm chua ngọt.</p>
+      </div>
+      <div class="food-item">
+        <img src="https://khaihoanphuquoc.com.vn/wp-content/uploads/2023/08/cach-lam-nuoc-mam-bun-cha-02.jpg" alt="Bún chả">
+        <h3>Bún Chả</h3>
+        <p>Thịt nướng thơm phức ăn kèm với bún tươi, nước mắm pha chua ngọt và rau sống.</p>
+      </div>
+      <div class="food-item">
+        <img src="https://eggyolk.vn/wp-content/uploads/2024/10/che-ba-mau-chiem-vi-tri-11-_691716353401.webp" alt="Chè ba màu">
+        <h3>Chè Ba Màu</h3>
+        <p>Món tráng miệng mát lạnh với đậu xanh, đậu đỏ, thạch và nước cốt dừa béo ngậy.</p>
+      </div>
+      <div class="food-item">
+        <img src="https://daylambanh.edu.vn/wp-content/uploads/2019/03/banh-xeo-bang-bot-pha-san-600x400.jpg" alt="Bánh xèo">
+        <h3>Bánh Xèo</h3>
+        <p>Bánh giòn rụm nhân tôm thịt giá đỗ, ăn kèm rau sống và nước mắm chua ngọt.</p>
+      </div>
+      <div class="food-item">
+        <img src="https://i-giadinh.vnecdn.net/2024/03/07/7-Hoan-thien-thanh-pham-1-6244-1709800134.jpg" alt="Cơm tấm">
+        <h3>Cơm Tấm</h3>
+        <p>Món cơm đặc trưng của miền Nam với sườn nướng, trứng ốp la và nước mắm pha.</p>
+      </div>
+      <div class="food-item">
+        <img src="https://bizweb.dktcdn.net/100/098/206/files/cach-lam-banh-cuon-chuan-ngon-2.jpg" alt="Bánh cuốn">
+        <h3>Bánh Cuốn</h3>
+        <p>Bánh mỏng mềm mịn cuộn nhân thịt băm, mộc nhĩ, ăn cùng chả lụa và nước chấm ngon.</p>
+      </div>
+      <div class="food-item">
+        <img src="https://www.huongnghiepaau.com/wp-content/uploads/2018/03/cach-nau-canh-chua-ca-dieu-hong.jpg" alt="Canh chua cá">
+        <h3>Canh Chua Cá</h3>
+        <p>Canh chua miền Tây với cá, dứa, cà chua, bạc hà, giá đỗ, mang vị chua ngọt đậm đà khó quên.</p>
+      </div>
+  </div>
+  <footer>
+    <p>© 2025 Ẩm Thực Việt. Thiết kế bởi Mai Hương.</p>
+  </footer>
+  <section id="trangchu" class="fade-in">
+    <div class="container">
+        <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+    </div>
+</section>
+</main>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    header.style.backgroundColor = window.scrollY > 0 ? '#e65c00' : '#ff914d';
+  });
+</script>
+
+</body>
+</html>
