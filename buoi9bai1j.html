@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế node</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #container {
+            margin: 20px auto;
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .p3 {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }.back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Quảng Ninh</h2>
+
+    <div id="container">
+        <p id="p1">Quảng Ninh là một tỉnh ven biển thuộc vùng Đông Bắc Bộ Việt Nam. Theo quy hoạch phát triển kinh tế, Quảng Ninh vừa thuộc vùng kinh tế trọng điểm phía bắc, và vừa thuộc Vùng duyên hải Bắc Bộ. Đây là tỉnh khai thác than đá chính của Việt Nam, có vịnh Hạ Long là di sản, kỳ quan thiên nhiên thế giới. Quảng Ninh cũng là 1 trong 8 tỉnh được Chính phủ Việt Nam quy hoạch thành thành phố trực thuộc trung ương.</p>
+        <p id="p2">Quảng Ninh được ví như một "Việt Nam thu nhỏ", có đa dạng các loại địa hình từ đồng bằng, vùng núi, ven biển,... Là tỉnh miền núi, trung du nằm ở vùng duyên hải, với hơn 80% đất đai là đồi núi. Trong đó, có hơn 2000 hòn đảo núi đá vôi nổi trên mặt biển, phần lớn chưa được đặt tên. Địa hình của tỉnh đa dạng có thể chia thành 3 vùng[9] gồm có Vùng núi, Vùng trung du và đồng bằng ven biển, và Vùng biển và hải đảo.</p>
+    </div>
+
+    <section id="trangchu" class="fade-in">
+        <div class="container">
+            <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+        </div>
+    </section>
+    
+    <button onclick="addnode()">add node</button>
+
+    <script>
+        function addnode() {
+            var x = document.createElement('p');
+            x.className = "p3";
+            x.innerText = "Quảng Ninh có quỹ đất dồi dào (611.081,3 ha). Trong đó: 10% là đất nông nghiệp, đất có rừng chiếm 38%, 43,8% là diện tích chưa sử dụng tập trung ở vùng miền núi và ven biển, còn lại là đất chuyên dùng và đất ở.[13] Với ưu thế của tỉnh miền núi, ven biển, khí hậu ẩm rất thuận lợi cho quá trình sinh trưởng phát triển các loài cây lấy gỗ, lấy nhựa như thông nhựa, thông mã vĩ, keo, bạch đàn... Đặc biệt, với đặc thù điều kiện lập địa trên diện tích đất đồi núi của tỉnh rất thích hợp với các loài cây gỗ quý, đặc sản, cây dược liệu, các loài cây mang tính bản địa.  [14] Quảng Ninh có nhiều loại đất. Chiếm diện tích lớn nhất là đất feralit vàng đỏ và đất feralit đồng cỏ thứ sinh phát triển ở địa hình đồi núi thấp.";
+            var cha = document.getElementById('container');
+            var y = document.getElementById('p2');
+            cha.insertBefore(x, y);
+        }
+    </script>
+
+</body>
+</html>

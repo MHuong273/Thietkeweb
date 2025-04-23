@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lịch sử, ý nghĩa Ngày giải phóng Miền Nam 30/4</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #par {
+      padding: 20px 40px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #par:hover {
+      background-color: #45a049;
+    }
+    .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+  </style>
+</head>
+<body>
+
+  <button id="par">Chiến thắng ngày 30/4/1975 là thành quả vĩ đại trong sự nghiệp giải phóng dân tộc</button>
+  <section id="trangchu" class="fade-in">
+    <div class="container">
+        <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+    </div>
+</section>
+  <script>
+    var pa = document.getElementById("par");
+
+    pa.addEventListener("click", myFunction);
+    pa.addEventListener("click", someOtherFunction);
+
+    function myFunction() {
+      alert("Năm tháng sẽ trôi qua nhưng thắng lợi của nhân dân ta trong sự nghiệp chống Mỹ, cứu nước mãi mãi được ghi vào lịch sử dân tộc ta như một trong những trang chói lọi nhất, một biểu tượng sáng ngời về sự toàn thắng của chủ nghĩa anh hùng cách mạng và trí tuệ con người, và đi vào lịch sử thế giới như một chiến công vĩ đại của thế kỷ XX, một sự kiện có tầm quan trọng quốc tế to lớn và có tính thời đại sâu sắc!");
+    }
+
+    function someOtherFunction() {
+      alert("Trong quá trình cách mạng Việt Nam từ khi có Đảng, ba cái mốc chói lọi bằng vàng: Tổng khởi nghĩa tháng Tám, chiến thắng Điện Biên Phủ và chiến thắng mùa xuân 1975, đại thắng mãi mãi sáng ngời trong sử sách. Nhân dân Việt Nam đã làm nên câu chuyện thần kì tưởng chừng không thể làm được giữa thế kỷ XX. Lần đầu tiên trong lịch sử, một dân tộc vốn là thuộc địa, nửa phong kiến, kinh tế kém phát triển, đánh thắng những cường quốc, đế quốc chủ nghĩa chủ yếu bằng sức của chính mình, nêu một tấm gương anh dũng, bất khuất, trí tuệ, tài năng trước toàn thế giới!");
+    }
+  </script>
+
+</body>
+</html>
+

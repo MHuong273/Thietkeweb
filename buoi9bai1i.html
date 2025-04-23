@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add ảnh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        #bo {
+            margin-top: 20px;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>chào mừng 50 năm ngày Giải phóng miền nam, thống nhất đất nước</h2>
+    <button onclick="addnode_img();">Thêm ảnh</button>
+
+    <div id="bo"></div>
+    <section id="trangchu" class="fade-in">
+        <div class="container">
+            <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+        </div>
+    </section>
+    
+    <script>
+        function addnode_img() {
+            var pt = document.createElement('img');
+            pt.src = "https://lh3.googleusercontent.com/proxy/i3fd0FDKzMLWuZKcz5LFrxnIuv_yX7enMwpQQMlOhX62aCFgnzMfEcJqpAqjSGr1AuQ5yqZPy4GjqZ4drKdYJjRBtokOj9WefFN6E8X4_Q";
+            document.getElementById("bo").appendChild(pt);
+        }
+    </script>
+
+</body>
+</html>

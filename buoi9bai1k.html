@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loại bỏ node</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        #container {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        button {
+            margin: 10px 0;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p id="p1">Sự kiện 30 tháng 4 năm 1975, thường được gọi là ngày 30 tháng 4, Ngày giải phóng miền Nam, Thống nhất Đất nước (tên gọi của Nhà nước Việt Nam) hoặc ngày Sài Gòn sụp đổ (Fall of Saigon, cách gọi của báo chí phương Tây), hoặc Ngày Quốc hận và Tháng Tư Đen (trong cộng đồng người Việt chống Cộng ở nước ngoài), là sự kiện chấm dứt Chiến tranh Việt Nam khi Quân đội Nhân dân Việt Nam và Quân Giải phóng miền Nam tiến vào thành phố Sài Gòn, Tổng thống Việt Nam Cộng hòa Dương Văn Minh cùng nội các tuyên bố đầu hàng vô điều kiện Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam vào sáng ngày 30 tháng 4 năm 1975. Ngày này là kết quả trực tiếp của Chiến dịch Mùa Xuân năm 1975 và là một mốc quan trọng trong lịch sử Việt Nam. Thành phố Sài Gòn sau đó được đổi tên thành Thành phố Hồ Chí Minh, theo tên của cố Chủ tịch Việt Nam Dân chủ Cộng hòa Hồ Chí Minh nhằm vinh danh ông và sự kiện này.</p>
+        <p id="p2">30 tháng 4 là ngày diễn ra sau khi tất cả công dân và lính Mỹ cùng hàng ngàn người Việt ở miền Nam Việt Nam di tản khỏi Sài Gòn. Chiến dịch Gió lốc trở thành hoạt động di tản bằng trực thăng lớn nhất trong lịch sử.Vì nhiều người đã di tản và chính phủ Việt Nam Xã hội chủ nghĩa áp dụng quy định mới về hộ khẩu đã góp phần làm cho dân số thành phố giảm xuống sau đó,tuy nhiên tỷ lệ giảm không nhiều (tốc độ giảm trung bình là 10.000 người mỗi năm trong khi dân số Sài Gòn là gần 4 triệu.</p>
+        <button onclick="remove_node1('p1')">remove node</button>
+    </div>
+
+    <div id="container">
+        <p id="p3">Ngày Quốc tế Lao động hay ngày 1 tháng 5 là ngày lễ kỷ niệm của phong trào công nhân quốc tế và của người lao động vào ngày 1 tháng 5 hằng năm, tại nhiều quốc gia trên thế giới, thường có các cuộc biểu tình trên đường phố của hàng triệu người lao động và các tổ chức công đoàn của họ. Vào ngày này, các phong trào cộng sản, cánh tả, các tổ chức theo chủ nghĩa vô chính phủ cùng với các công đoàn liên minh thực hiện các cuộc tuần hành trên đường phố, yêu cầu mở rộng các quyền lao động và an sinh xã hội.</p>
+        <p id="p4">Theo lịch vạn niên năm 2025, 30 tháng 4 rơi vào Thứ 4 và 1 tháng 5 rơi vào Thứ 5.</p>
+        <button onclick="remove_node2('container', 'p4')">remove node</button>
+    </div>
+    <section id="trangchu" class="fade-in">
+        <div class="container">
+            <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+        </div>
+    </section>
+    
+    <script>
+        function remove_node1(x) {
+            var elmnt = document.getElementById(x);
+            if (elmnt) {
+                elmnt.remove();
+            }
+        }
+
+        function remove_node2(x, y) {
+            var cha = document.getElementById(x);
+            var con = document.getElementById(y);
+            if (cha && con) {
+                cha.removeChild(con);
+            }
+        }
+    </script>
+
+</body>
+</html>

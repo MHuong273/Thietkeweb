@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Menu Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 900px;
+      margin: 0 auto;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 13px;
+    }
+
+    .menu {
+      height: 100px;
+      background-color: rgb(13, 121, 13);
+      line-height: 100px;
+      color: white;
+      position: fixed;
+      width: 900px;
+      z-index: 999;
+    }
+
+    .trai {
+      float: left;
+      font-size: 3em;
+      margin-left: 125px;
+      transition: 0.4s;
+      height: 100px;
+    }
+
+    .phai {
+      float: right;
+      transition: 0.4s;
+      height: 100px;
+    }
+
+    .phai a {
+      text-decoration: none;
+      padding-right: 40px;
+      font-size: 1.5em;
+      color: wheat;
+    }
+
+    .content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 120px;
+    }
+
+    .cot {
+      width: 20%;
+      text-align: justify;
+    }
+
+    /* Khi cuộn chuột */
+    .nholaitrai {
+      font-size: 2em;
+      margin-left: 100px;
+      color: black;
+      height: 80px;
+    }
+
+    .nholaiphai {
+      font-size: 1.2em;
+      padding-right: 30px;
+      height: 80px;
+    }
+    .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <div class="trai">LOGO</div>
+      <div class="phai">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Liên hệ</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="cot">
+        11 giờ 30 phút trưa 30/4/1975, cổng Dinh Độc Lập đã bị húc đổ, lá cờ của Quân Giải phóng tung bay ngay tại tổng hành dinh của chính quyền Sài Gòn trong niềm hân hoan, chờ đón của cả dân tộc. Từ đây, miền Nam đã hoàn toàn giải phóng, non sông Việt Nam thống nhất một dải.Đây là thắng lợi vĩ đại nhất, kết thúc 30 năm chiến tranh lâu dài, gian khổ chống ngoại xâm của dân tộc Việt Nam, mở ra một kỷ nguyên mới - kỷ nguyên độc lập dân tộc và chủ nghĩa xã hội trên toàn bộ Tổ quốc Việt Nam.
+
+        Chiến dịch Hồ Chí Minh đánh dấu bước ngoặt lớn trong lịch sử dân tộc, đã hoàn thành trọn vẹn mục tiêu “Đánh cho Mỹ cút, đánh cho ngụy nhào” như Chủ tịch Hồ Chí Minh đề ra; giải phóng toàn bộ miền Nam, chấm dứt 21 năm chia cắt đất nước, đưa đến sự thống nhất, độc lập, chủ quyền toàn vẹn lãnh thổ của Việt Nam trên đất liền, vùng trời, vùng biển; đưa dân tộc ta bước vào kỷ nguyên mới.
+        
+        Thắng lợi của Chiến dịch Hồ Chí Minh là thành quả tổng hợp của các nhân tố: Đó là sự lãnh đạo của Đảng ta, đứng đầu là Chủ tịch Hồ Chí Minh với đường lối chính trị, đường lối quân sự đúng đắn, sáng tạo, độc lập tự chủ; là sức mạnh của truyền thống bốn nghìn năm lịch sử dựng nước và giữ nước, là ý chí kiên cường, bất khuất, ý thức làm chủ vận mệnh đất nước của cả dân tộc Việt Nam với tinh thần “Không có gì quý hơn độc lập tự do;” là cuộc chiến đấu dũng cảm, thông minh của cả nước mà nòng cốt là lực lượng vũ trang ba thứ quân; là tình đoàn kết và liên minh chiến đấu của nhân dân ba nước Đông Dương; là sự đồng tình ủng hộ mạnh mẽ của các lực lượng cách mạng và hòa bình trên thế giới.
+        
+        Đánh giá thắng lợi của cuộc kháng chiến chống Mỹ, cứu nước nói chung, Chiến dịch Hồ Chí Minh nói riêng, tại Đại hội đại biểu toàn quốc lần thứ 4 tháng 12/1976, Đảng ta đã nhận định “Năm tháng sẽ trôi qua, nhưng thắng lợi của nhân dân ta trong sự nghiệp kháng chiến chống Mỹ, cứu nước mãi mãi được ghi vào lịch sử dân tộc như một trong những trang chói lọi nhất, một biểu tượng sáng ngời về sự toàn thắng của Chủ nghĩa anh hùng cách mạng và trí tuệ con người và đi vào lịch sử thế giới như một chiến công vĩ đại của thế kỷ XX, một sự kiện có tầm quan trọng quốc tế to lớn và có tinh thần thời đại sâu sắc”.
+      </div>
+      <div class="cot">
+        Thực hiện quyết tâm của Bộ Chính trị và Quân ủy T.Ư, hậu phương lớn miền bắc đã huy động toàn bộ lực lượng và phương tiện chuyển vào miền nam 230.000 tấn vật chất, kỹ thuật; riêng trong 11 ngày chuẩn bị nước rút cho Chiến dịch Hồ Chí Minh, miền bắc đã đưa vào miền đông Nam Bộ 51.000 tấn vật chất các loại. Ở miền nam, hậu cần miền đã huy động 63.324 dân công hỏa tuyến vận chuyển đạn, gạo, thực phẩm vào các kho dự trữ chiến dịch trên năm hướng.
+
+Cùng với việc vận chuyển vật chất, kỹ thuật quân sự, các binh đoàn chiến lược binh chủng hợp thành của Quân đội nhân dân Việt Nam vừa đánh địch, mở đường, vừa hành quân thần tốc, táo bạo vào mặt trận Sài Gòn trên cả năm hướng bắc, tây-bắc, đông, đông-nam, tây-nam. Mỗi hướng lực lượng chủ lực ta có từ 30.000 đến 50.000 quân và hàng nghìn xe tăng, thiết giáp, xe cơ giới khác.
+
+Ngày 8/4, Bộ Chỉ huy chiến dịch giải phóng Sài Gòn - Chiến dịch Hồ Chí Minh được thành lập, do Ðại tướng Văn Tiến Dũng làm Tư lệnh, đồng chí Phạm Hùng làm Chính ủy; các đồng chí Trần Văn Trà, Lê Ðức Anh, Lê Trọng Tấn, Ðinh Ðức Thiện, làm Phó Tư lệnh; đồng chí Lê Ngọc Hiền, quyền Tham mưu trưởng chiến dịch.
+
+Tình hình diễn biến mau lẹ từng ngày, đòi hỏi lực lượng tham gia chiến dịch hết sức khẩn trương. Ðể giành thắng lợi cho trận quyết chiến cuối cùng này và để nhanh chóng đè bẹp sự kháng cự của quân ngụy, giữ cho thành phố không bị đổ nát, Bộ Tư lệnh chiến dịch họp bàn và đề ra cách đánh chiến dịch là: Dùng một bộ phận của từng hướng bao vây, chia cắt, ngăn chặn không cho lực lượng địch co cụm về Sài Gòn, diệt và làm tan rã các sư đoàn chủ lực địch ở vòng ngoài; đồng thời dùng lực lượng mạnh nhanh chóng thọc sâu đánh chiếm bàn đạp vùng ven để mở đường cho các binh đoàn chiến lược đột kích thẳng vào các mục tiêu then chốt đã lựa chọn trong nội đô.
+      </div>
+      <div class="cot">
+        Trong lúc Bộ Chỉ huy chiến dịch bàn cách đánh, thì phi công Nguyễn Thành Trung lái chiếc F5E ném bom dinh Ðộc lập, rồi bay ra vùng giải phóng an toàn. Trận ném bom dinh Ðộc lập đã làm cho địch hoang mang, nội bộ nghi kỵ lẫn nhau, góp phần thúc đẩy nhanh quá trình suy sụp của chính quyền Sài Gòn, tạo thuận lợi cho các binh đoàn chủ lực của ta triển khai thế trận.
+
+Ngày 9/4, Quân đoàn 4 tiến công tuyến phòng thủ của địch ở Xuân Lộc. Ngày 14/4, ở hướng đông, Quân đoàn 2 nổ súng tiến công tuyến phòng thủ Phan Rang. Cũng trong ngày này, Bộ Chính trị quyết định đặt tên cho chiến dịch giải phóng Sài Gòn là Chiến dịch Hồ Chí Minh.
+
+Ngày 21/4, cuộc tiến công mạnh mẽ của Quân đoàn 4 và Trung đoàn 95B đã đè bẹp mọi sức kháng cự của địch, tiêu diệt và làm tan rã sư đoàn 18 ngụy, giải phóng Xuân Lộc và toàn tỉnh Long Khánh. Cánh cửa thép hướng đông tiến vào Sài Gòn đã mở. Thấy không thể cứu vãn được chính quyền Sài Gòn, Tổng thống Mỹ G.Pho ra lệnh di tản người Mỹ khỏi Sài Gòn.
+
+Ngày 21/4, Nguyễn Văn Thiệu từ chức, Trần Văn Hương lên thay thề sẽ cùng "tử thủ" với binh sĩ.
+
+Ngày 22/4, đồng chí Lê Duẩn, Bí thư thứ nhất Ban Chấp hành T.Ư Ðảng theo sát cuộc tiến công đã điện chỉ đạo Bộ Tư lệnh chiến dịch là: "Thời cơ quân sự và chính trị để mở cuộc tổng tiến công vào Sài Gòn đã chín muồi. Ta cần tranh thủ từng ngày, kịp thời phát động tiến công địch trên các hướng, không thể để chậm. Nếu để chậm thì không có lợi về chính trị, quân sự. Kịp thời hành động lúc này là bảo đảm chắc chắn nhất để giành thắng lợi hoàn toàn...".
+
+Ngày 23/4, Quân đoàn 2 mở cuộc tiến công giải phóng thị xã Hàm Tân và toàn tỉnh Bình Tuy, áp sát lực lượng vào Biên Hòa.
+
+Theo kế hoạch của Bộ Chỉ huy chiến dịch, ngày 27/4, các hướng sẽ đồng loạt tiến công địch, chiếm bàn đạp ven đô. Tuy nhiên, lúc 17 giờ ngày 26/4, Quân đoàn 2 đã nổ súng tiến công tuyến phòng thủ của địch ở hướng đông và đông-nam, đánh chiếm Trường huấn luyện thiết giáp; căn cứ Nước Trong, Chi khu Long Thành, vượt đường số 15, giải phóng Phước Thường, bao vây Long Tân, đánh chiếm chi khu Ðức Thạnh. Quân đoàn 4 đánh chiếm chi khu Trảng Bom, diệt và làm tan rã lữ dù 3, lữ thủy quân lục chiến 468...
+
+Chiến dịch Hồ Chí Minh mở màn! Quân ta trên các hướng bắc, tây-bắc, đông và đông-nam, tây và tây-nam đã kết hợp tiến công với nổi dậy, tiêu diệt và làm tan rã các sư đoàn địch phòng thủ vòng ngoài, chiếm bàn đạp vùng ven, sẵn sàng tổng công kích vào nội đô.
+      </div>
+    </div>
+  </div>
+  <section id="trangchu" class="fade-in">
+    <div class="container">
+        <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+    </div>
+</section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const doituongmenutrai = document.querySelector(".trai");
+      const doituongmenuphai = document.querySelector(".phai");
+      let trangthai = "duoi110";
+
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 110) {
+          if (trangthai === "duoi110") {
+            trangthai = "tren110";
+            doituongmenutrai.classList.add("nholaitrai");
+            doituongmenuphai.classList.add("nholaiphai");
+          }
+        } else {
+          if (trangthai === "tren110") {
+            doituongmenutrai.classList.remove("nholaitrai");
+            doituongmenuphai.classList.remove("nholaiphai");
+            trangthai = "duoi110";
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
